@@ -1,0 +1,7 @@
+name = "advent_20211221"
+uuid = "f492e492-da36-4d64-af34-db72409b896d"
+authors = ["alexander papageorge <atpapag@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+IterTools = "c8e1da08-722c-5040-9ed9-7db0dc04731e"
