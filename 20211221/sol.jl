@@ -1,3 +1,5 @@
+# for 3 3sided die, throwing them will yield any number between 3 and 9,
+# with the following multiplicities
 const COUNT_DICT = Dict(5 => 6,
                         4 => 3,
                         6 => 7,
@@ -72,8 +74,8 @@ function get_num_wins(p0, p1, cache=nothing)
             new_pos0 = p0.pos + roll0
             new_score0 = p0.score + ((new_pos0 - 1) % 10) + 1
             new_p0 = Player(new_pos0, new_score0)
-            @assert new_pos0 >= 0
-            if new_score0 >= MAX_SCORE
+            @assert new_p0.pos >= 0
+            if new_p0.score >= MAX_SCORE
                 num_wins += redundancy0
                 continue
             end
@@ -82,8 +84,8 @@ function get_num_wins(p0, p1, cache=nothing)
                 new_pos1 = p1.pos + roll1
                 new_score1 = p1.score + ((new_pos1 - 1) % 10) + 1
                 new_p1 = Player(new_pos1, new_score1)
-                @assert new_pos1 >= 0
-                if new_score1 >= MAX_SCORE
+                @assert new_p1.pos >= 0
+                if new_p1.score >= MAX_SCORE
                     continue
                 end
 
