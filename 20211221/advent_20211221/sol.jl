@@ -1,5 +1,3 @@
-using IterTools: chain
-
 const COUNT_DICT = Dict(5 => 6,
                         4 => 3,
                         6 => 7,
